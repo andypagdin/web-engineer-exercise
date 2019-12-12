@@ -5,7 +5,7 @@ export default function Apps({
     error,
     items,
     fetchApps
-}) { 
+}) {
     if (!items || !items.length) {
         fetchApps();
         return (<div>LOADING APPS...</div>);

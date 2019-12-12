@@ -14,7 +14,7 @@ export default function apps (state = initialState, action) {
     const { type, payload } = action;
 
     switch (type) {
-        case APPS_REQUEST: 
+        case APPS_REQUEST:
             return Object.assign({}, state, { requesting: true });
         case APPS_SUCCESS:
             return Object.assign(
@@ -25,7 +25,7 @@ export default function apps (state = initialState, action) {
                     items: payload
                 }
             );
-        case APPS_ERROR: 
+        case APPS_ERROR:
             return Object.assign(
                 {},
                 state,

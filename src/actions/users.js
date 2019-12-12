@@ -17,7 +17,7 @@ function usersError() {
 }
 
 export function fetchUsers(appId) {
-    return async function (dispatch) {    
+    return async function (dispatch) {
         dispatch(usersRequesting());
 
         const response = await fetch(`https://guarded-thicket-22918.herokuapp.com/apps/${appId}/users`, {

@@ -17,8 +17,8 @@ function appsError() {
 }
 
 export function fetchApps() {
-    return async function (dispatch) {    
-        dispatch(appsRequesting());        
+    return async function (dispatch) {
+        dispatch(appsRequesting());
 
         const response = await fetch('https://guarded-thicket-22918.herokuapp.com/apps', {
             headers: {

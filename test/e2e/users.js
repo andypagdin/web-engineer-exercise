@@ -21,7 +21,7 @@ describe('/users', () => {
         const signin = signinObject(page);
         const users = usersObject(page);
         const apps = appsObject(page);
-        
+
         await signin.enterUserName('foo@bar.com');
         await signin.enterPassword('hunter2');
         await signin.clickSubmit();
@@ -40,7 +40,7 @@ describe('/users', () => {
         const signin = signinObject(page);
         const users = usersObject(page);
         const apps = appsObject(page);
-        
+
         await signin.enterUserName('foo@bar.com');
         await signin.enterPassword('hunter2');
         await signin.clickSubmit();
@@ -66,7 +66,7 @@ describe('/users', () => {
         const signin = signinObject(page);
         const users = usersObject(page);
         const apps = appsObject(page);
-        
+
         await signin.enterUserName('foo@bar.com');
         await signin.enterPassword('hunter2');
         await signin.clickSubmit();

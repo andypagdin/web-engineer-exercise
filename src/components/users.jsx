@@ -8,7 +8,7 @@ function buildPagination(id, page = 0) {
             <li><Link to={`/apps/${id}/${page}`}>Next</Link></li>
         </ul>
     );
-} 
+}
 
 export default function Users({
     error,

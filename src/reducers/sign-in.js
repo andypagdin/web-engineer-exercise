@@ -14,9 +14,9 @@ export default function signIn (state = initialState, action) {
     const { type } = action;
 
     switch (type) {
-        case AUTHENTICATION_REQUEST: 
+        case AUTHENTICATION_REQUEST:
             return Object.assign({}, state, { requesting: true });
-        case AUTHENTICATION_SUCCESS: 
+        case AUTHENTICATION_SUCCESS:
             return Object.assign(
                 {},
                 state,
@@ -25,7 +25,7 @@ export default function signIn (state = initialState, action) {
                     success: true
                 }
             );
-        case AUTHENTICATION_ERROR: 
+        case AUTHENTICATION_ERROR:
             return Object.assign(
                 {},
                 state,
