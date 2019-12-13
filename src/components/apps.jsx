@@ -15,7 +15,7 @@ export default function Apps({
         <ul id="apps">
             {items.map(({ id, name, logo }) => {
                 return (
-                    <li class="app">
+                    <li key={id} className="app">
                         <Link to={`/apps/${id}`}>
                             <p>{name}</p>
                             <img src={logo} alt={name} width="100" height="100"/>
