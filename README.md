@@ -20,7 +20,7 @@ Please capture any features that you don’t have time to implement and / or any
 
 ## Missing features
 
-- Redirecting logged out users to the sign in form when they try to navigate to one of the routes
+- ✅ Redirecting logged out users to the sign in form when they try to navigate to one of the routes
 - Style up the application
 - Error messaging on the form when submitted with incorrect data
 - Paginate the list of users
