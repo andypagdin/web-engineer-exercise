@@ -1,10 +1,10 @@
 const puppeteer = require('puppeteer');
 
 async function page(path) {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    await page.goto(`localhost:8080${path}`);
+    await page.goto(`http://localhost:8080${path}`);
 
     return { browser, page };
 }
