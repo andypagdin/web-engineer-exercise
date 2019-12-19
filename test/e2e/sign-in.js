@@ -25,6 +25,6 @@ describe('/sign-in', () => {
         await signin.clickSubmit();
         await signin.hasSubmissionError();
 
-        await page.close();
+        await browser.close();
     });
 });

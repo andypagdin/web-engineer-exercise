@@ -1,12 +1,12 @@
 - [Building a developer portal](#building-a-developer-portal)
   - [Missing features](#missing-features)
-  - [Minimum requirements](#minimum-requirements)
-  - [Running the app](#running-the-app)
+  - [Minimum requirements:](#minimum-requirements)
+- [Running the app](#running-the-app)
 - [API](#api)
   - [Authentication](#authentication)
   - [Obtaining an access token](#obtaining-an-access-token)
   - [Apps and their users](#apps-and-their-users)
-  - [Example calls and data model](#example-calls-and-data-model)
+  - [Example calls and data model:](#example-calls-and-data-model)
 
 # Building a developer portal
 
@@ -22,7 +22,7 @@ Please capture any features that you don’t have time to implement and / or any
 
 - ✅ Redirecting logged out users to the sign in form when they try to navigate to one of the routes
 - Style up the application
-- Error messaging on the form when submitted with incorrect data
+- ✅ Error messaging on the form when submitted with incorrect data
 - Paginate the list of users
 - Build the app editing functionality
 - Make sure all functionality is covered by an E2E test and those tests pass

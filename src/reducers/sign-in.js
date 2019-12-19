@@ -15,14 +15,23 @@ export default function signIn (state = initialState, action) {
 
     switch (type) {
         case AUTHENTICATION_REQUEST:
-            return Object.assign({}, state, { requesting: true });
+            return Object.assign(
+                {},
+                state,
+                {
+                    requesting: true,
+                    success: null,
+                    error: null
+                }
+            );
         case AUTHENTICATION_SUCCESS:
             return Object.assign(
                 {},
                 state,
                 {
                     requesting: false,
-                    success: true
+                    success: true,
+                    error: false
                 }
             );
         case AUTHENTICATION_ERROR:
@@ -31,6 +40,7 @@ export default function signIn (state = initialState, action) {
                 state,
                 {
                     requesting: false,
+                    success: false,
                     error: true
                 }
             );

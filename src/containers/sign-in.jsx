@@ -5,10 +5,10 @@ import SignIn from '../components/sign-in.jsx';
 import { authenticate } from '../actions/sign-in';
 
 const mapStateToProps = (state, router) => {
-    const { error, requesting } = state.signIn;
+    const { error, requesting, success } = state.signIn;
     const redirect = router.history.push;
 
-    return { error, requesting, redirect };
+    return { error, requesting, success, redirect };
 };
 
 const mapDispatchToProps = (dispatch, props) => {

@@ -1,15 +1,39 @@
-import React, { useState } from 'react';
-import { Route } from 'react-router-dom';
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
 
 import { isValidToken } from '../actions/sign-in';
-import SignIn from '../containers/sign-in.jsx';
 
-export default function PrivateRoute ({ component, ...props }) {
-  const [validToken, setValidToken] = useState(false);
+class PrivateRoute extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      validToken: null
+    };
+    this.checkToken = this.checkToken.bind(this);
+    this.setValidToken = this.setValidToken.bind(this);
+  }
 
-  isValidToken().then(result => {
-    setValidToken(result);
-  });
+  componentDidMount () {
+    this.checkToken();
+  }
 
-  return validToken ? <Route {...props} component={component} /> : <Route {...props} component={SignIn} />
-};
+  setValidToken (isValid) {
+    this.setState({ validToken: isValid });
+  };
+
+  async checkToken () {
+    await isValidToken().then(result => {
+      this.setValidToken(result);
+    })
+  }
+
+  render () {
+    if (this.state.validToken === null) {
+      return <div>CHECKING TOKEN...</div>;
+    }
+
+    return this.state.validToken ? <Route {...this.props} component={this.props.component} /> : <Redirect to={{pathname: '/'}} />;
+  }
+}
+
+export default PrivateRoute;

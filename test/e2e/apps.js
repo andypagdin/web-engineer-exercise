@@ -2,7 +2,7 @@ const setupPage = require('./setup').page;
 const signinObject = require('./page-objects/sign-in');
 const appsObject = require('./page-objects/apps');
 
-describe.only('/apps', () => {
+describe('/apps', () => {
     it('redirects to the sign-in page when the user is not signed in', async () => {
         const { page, browser } = await setupPage('/apps');
         const signin = signinObject(page);
@@ -29,5 +29,5 @@ describe.only('/apps', () => {
         await browser.close();
     });
 
-    it('updates the app information when the user changes them');
+    // it('updates the app information when the user changes them');
 });
